@@ -1,3 +1,33 @@
 Pedro oliveira
 Murilo bastos 
 Guilherme Lisboa 
+
++---------------------+       +---------------------+       +-------------------------+
+|      Cliente        |       |      Veiculo        |       |        Locacao          |
++---------------------+       +---------------------+       +-------------------------+
+| - id: int           |       | - id: int           |       | - veiculo: Veiculo      |
+| - nome: String      |<----->| - placa: String     |<----->| - cliente: Cliente      |
+| - cpf: String       |       | - marca: String     |       | - dataInicio: LocalDate |
+| - cnh: String       |       | - modelo: String    |       | - dataFim: LocalDate    |
++---------------------+       | - disponivel: boolean|      +-------------------------+
+                              +---------------------+
+| +getters/setters()  |      | +isDisponivel():bool |
++---------------------+      | +alugar():void       |
+                             | +devolver():void     |
+                             +---------------------+
+
++-------------------------------------------------------------+
+|               GerenciadorDeLocacao                         |
++-------------------------------------------------------------+
+| - veiculos: List<Veiculo>                                   |
+| - clientes: List<Cliente>                                   |
+| - locacoes: List<Locacao>                                   |
++-------------------------------------------------------------+
+| +cadastrarVeiculo(v:Veiculo):void                           |
+| +cadastrarCliente(c:Cliente):void                           |
+| +iniciarLocacao(c:Cliente, v:Veiculo):Locacao               |
+| +finalizarLocacao(l:Locacao, dataFim:LocalDate):void        |
+| +listarDisponiveis():List<Veiculo>                          |
++-------------------------------------------------------------+
+
+
